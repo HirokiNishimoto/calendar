@@ -1,6 +1,5 @@
 import React from 'react';
 import img_urls from './materials';
->>>>>>> aa56c07fca15f85b31595cbad3c9c0569c1af7b4
 
 class Date extends React.Component {
   constructor(props) {
