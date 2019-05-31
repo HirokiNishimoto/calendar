@@ -4,8 +4,6 @@ import Main from './Main';
 import Date from './Date';
 import Footer from './Footer';
 
-
-
 class App extends React.Component {
   render() {
     return (
