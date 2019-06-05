@@ -81,8 +81,6 @@ p {
   font-weight: 100000000000000;
   padding: 10px 5px 5px 70px;
   font-size: 30px;
-  /* float: center; */
-  /* text-align: left; */
   color : #aaaaaa
 }
 
@@ -118,8 +116,19 @@ p {
 }
 
 .footer {
-  padding: 80px 0;
+  height: 60px;
+  border-bottom: 0px solid #eee;
+  margin-bottom: 1px;
+  margin-bottom: 1px;
   background-color: #222222;
+}
+
+.footer-title {
+  font-family: "Lato";
+  font-weight: 100000000000000;
+  padding: 10px 5px 5px 70px;
+  font-size: 30px;
+  color : #aaaaaa
 }
 
 .footer-inner {
@@ -129,13 +138,6 @@ p {
 
 .footer-logo {
   display: inline-block;
-}
-
-.footer-logo img {
-  height: 60px;
-}
-
-.footer-logo {
   height: 60px;
   width: 60px;
   background-color: #2b546a;
@@ -143,20 +145,8 @@ p {
   text-align: center;
 }
 
-.footer-inner ul {
-  float: right;
-}
-
-.footer-inner li {
-  color: #2b546a;
-  display: inline-block;
-  padding-left: 16px;
-}
-
-/*  */
-body {
-  margin: 0;
-  padding: 0;
+.footer-logo img {
+  height: 60px;
 }
 
 .box {
@@ -168,22 +158,13 @@ body {
   justify-content: left; /* 横方向中央揃え */
   flex-direction: column;
 }
+
 .box__bg_black {
-  background-color: #333;
-}
-.box__bg_gray {
-  background-color: #ccc;
+  background-color: #000;
 }
 
-.box__bg_gray img {
+.box__bg_black img {
   width:  800px;
   height: 550px;
   80vh;
-}
-
-.box__bg_photo {
-  background-image: url(https://mae.chab.in/wp-content/uploads/2015/09/QsjPn.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
