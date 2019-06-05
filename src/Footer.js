@@ -12,7 +12,7 @@ class Footer extends React.Component {
         </a>
         </div>
         <div className='footer-title'>
-          Click to the see ths source code!
+          Click to see the source code!
         </div>
       </div>
     );
