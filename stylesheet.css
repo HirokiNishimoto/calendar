@@ -87,7 +87,7 @@ p {
 }
 
 .main-wrapper {
-  height: 78vh;
+  height: 645px;
   background-color: #222222;
   padding: 10px  10px  50px  50px;
   margin: 0px  1px  1px  1px;
@@ -158,21 +158,10 @@ body {
   margin: 0;
   padding: 0;
 }
-.scroll-area {
-  width: 60vw;
-  height: 70vh;
-  margin-top: 30px;
-  overflow: auto;
-  -webkit-scroll-behavior: smooth;
-  scroll-behavior: smooth;
-  -webkit-scroll-snap-type: mandatory;
-  scroll-snap-type: mandatory;
-  -webkit-scroll-snap-points-y: repeat(100%);
-  /* scroll-snap-points-y: repeat(100%); */
-}
+
 .box {
-  width: 60vw;
-  height: 60vh;
+  width: 800px;
+  height: 550px;
   color: #fff;
   display: flex;
   align-items: center; /* 縦方向中央揃え */
@@ -187,8 +176,8 @@ body {
 }
 
 .box__bg_gray img {
-  width:  60vw;
-  height: 60vh;
+  width:  800px;
+  height: 550px;
   80vh;
 }
 
