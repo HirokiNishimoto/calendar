@@ -1,50 +1,42 @@
 import React from 'react';
-import Lesson from './Lesson';
+import img_urls from './materials';
+import img_descriptions from './img_descriptions';
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {count: 1, pattern: 1};
+    this.img_urls = img_urls;
+  }
+  handleClick_1() {
+    if (this.state.count < 31) {
+      this.setState({count : this.state.count + 1, pattern: this.state.pattern})
+    } else {
+      this.setState({count : this.state.count = 1, pattern: this.state.pattern})
+    }
+  }
+  handleClick_2() {
+    this.setState({count : this.state.count, pattern: this.state.pattern*=-1})
+  }
   render() {
-    const lessonList = [
-      {
-        name: 'HTML & CSS',
-        image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/html.svg',
-        introduction: 'WEBページはHTML、CSSという言語によってその見た目が作られています。 実際にWEBページを作りながら学んでみましょう！',
-      },
-      {
-        name: 'Sass',
-        image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/sass.svg',
-        introduction: 'SassはCSSをより便利に効率的にするための言語です。',
-      },
-      {
-        name: 'JavaScript',
-        image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/es6.svg',
-        introduction: 'JavaScriptはフロントエンドだけでなく、サーバーサイドまで広い可能性を持つプログラミング言語です。',
-      },
-      {
-        name: 'React',
-        image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/react.svg',
-        introduction: 'ReactはHTMLのように、サイトの見た目をつくることができるJavaScriptのライブラリです。',
-      },
-    ];
-
     return (
       <div className='main-wrapper'>
-        <div className='main'>
-          <div className='copy-container'>
-            <h1>Hello, World.</h1>
-            <h2>プログラミングの世界へようこそ！</h2>
-          </div>
-          <div className='lesson-container'>
-            <h3>学べるレッスン</h3>
-            {lessonList.map((lessonItem) => {
-              return (
-                <Lesson
-                  name={lessonItem.name}
-                  image={lessonItem.image}
-                  introduction={lessonItem.introduction}
-                />
-              );
-            })}
-          </div>
+        <div className='main-left'>
+          <h1>
+            今日は {this.state.count}日です
+          </h1>
+          <p>
+            <button onClick={() => {this.handleClick_2()}}>画像を切り替える</button>
+          </p>
+          <p>
+            <button onClick={() => {this.handleClick_1()}}>カレンダーをめくる</button>
+          </p>
+        </div>
+        <div className="main-right">
+            <div className="describe-image">{img_descriptions[(this.state.pattern+1)/2]}</div>
+            <div className="box box__bg_black">
+            <img src={this.img_urls[(this.state.pattern+1)/2][this.state.count-1]} />
+        </div>
         </div>
       </div>
     );

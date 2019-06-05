@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Header';
 import Main from './Main';
-import Date from './Date';
 import Footer from './Footer';
 
 class App extends React.Component {
@@ -9,8 +8,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-
-        <Date/>
+        <Main/>
         <Footer/>
       </div>
     );
